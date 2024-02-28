@@ -4,6 +4,7 @@ def seleccionar_palabra():
     palabras = ["python", "programacion", "desarrollo", "computadora", "algoritmo", "inteligencia",]
     return random.choice(palabras)
 
+#Funcio amb la lògica del joc
 def jugar_adivinanza():
     palabra_secreta = seleccionar_palabra()
     palabra_adivinada = ["_"] * len(palabra_secreta)
