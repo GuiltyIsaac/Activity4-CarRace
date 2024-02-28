@@ -36,5 +36,7 @@ def jugar_adivinanza():
     else:
         print(f"Has agotado tus intentos. La palabra era: {palabra_secreta}")
 
+
+#és la funcio main que crida a les demés
 if __name__ == "__main__":
     jugar_adivinanza()
