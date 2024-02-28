@@ -1,4 +1,5 @@
 import random
+#Program to guess a word, created by Alba & Isaac
 
 def seleccionar_palabra():
     #List that contains some words to play
