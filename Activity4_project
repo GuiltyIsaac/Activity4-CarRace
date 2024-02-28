@@ -1,6 +1,7 @@
 import random
 
 def seleccionar_palabra():
+    #List that contains some words to play
     palabras = ["python", "programacion", "desarrollo", "computadora", "algoritmo", "inteligencia",]
     return random.choice(palabras)
 
