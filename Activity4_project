@@ -1,10 +1,13 @@
 import random
+#Program to guess a word, created by Alba & Isaac
 
 def seleccionar_palabra():
+    #List that contains some words to play
     palabras = ["python", "programacion", "desarrollo", "computadora", "algoritmo", "inteligencia",]
     return random.choice(palabras)
 
 def jugar_adivinanza():
+    #The principal function!
     palabra_secreta = seleccionar_palabra()
     palabra_adivinada = ["_"] * len(palabra_secreta)
     intentos_maximos = 6
