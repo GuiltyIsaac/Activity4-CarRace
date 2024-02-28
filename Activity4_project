@@ -6,6 +6,7 @@ def seleccionar_palabra():
     palabras = ["python", "programacion", "desarrollo", "computadora", "algoritmo", "inteligencia",]
     return random.choice(palabras)
 
+#Funcio amb la lògica del joc
 def jugar_adivinanza():
     #The principal function!
     palabra_secreta = seleccionar_palabra()
@@ -16,6 +17,7 @@ def jugar_adivinanza():
     print("¡Bienvenido al juego de adivinanza de palabras!")
     print(" ".join(palabra_adivinada))
 
+    #El limit d'intents és 6
     while "_" in palabra_adivinada and intentos < intentos_maximos:
         letra = input("Ingresa una letra: ").lower()
 
@@ -37,5 +39,7 @@ def jugar_adivinanza():
     else:
         print(f"Has agotado tus intentos. La palabra era: {palabra_secreta}")
 
+
+#és la funcio main que crida a les demés
 if __name__ == "__main__":
     jugar_adivinanza()
