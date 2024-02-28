@@ -7,6 +7,7 @@ def seleccionar_palabra():
     return random.choice(palabras)
 
 def jugar_adivinanza():
+    #The principal function!
     palabra_secreta = seleccionar_palabra()
     palabra_adivinada = ["_"] * len(palabra_secreta)
     intentos_maximos = 6
