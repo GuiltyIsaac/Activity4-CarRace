@@ -14,6 +14,7 @@ def jugar_adivinanza():
     print("¡Bienvenido al juego de adivinanza de palabras!")
     print(" ".join(palabra_adivinada))
 
+    #El limit d'intents és 6
     while "_" in palabra_adivinada and intentos < intentos_maximos:
         letra = input("Ingresa una letra: ").lower()
 
