@@ -1,0 +1,38 @@
+import random
+
+def seleccionar_palabra():
+    palabras = ["python", "programacion", "desarrollo", "computadora", "algoritmo", "inteligencia",]
+    return random.choice(palabras)
+
+def jugar_adivinanza():
+    palabra_secreta = seleccionar_palabra()
+    palabra_adivinada = ["_"] * len(palabra_secreta)
+    intentos_maximos = 6
+    intentos = 0
+#bla bla
+    print("¡Bienvenido al juego de adivinanza de palabras!")
+    print(" ".join(palabra_adivinada))
+
+    while "_" in palabra_adivinada and intentos < intentos_maximos:
+        letra = input("Ingresa una letra: ").lower()
+
+        if letra.isalpha() and len(letra) == 1:
+            if letra in palabra_secreta:
+                for i in range(len(palabra_secreta)):
+                    if palabra_secreta[i] == letra:
+                        palabra_adivinada[i] = letra
+            else:
+                intentos += 1
+                print(f"Letra incorrecta. Intentos restantes: {intentos_maximos - intentos}")
+
+            print(" ".join(palabra_adivinada))
+        else:
+            print("Ingresa una letra válida.")
+
+    if "_" not in palabra_adivinada:
+        print("¡Felicidades! Has adivinado la palabra correctamente.")
+    else:
+        print(f"Has agotado tus intentos. La palabra era: {palabra_secreta}")
+
+if __name__ == "__main__":
+    jugar_adivinanza()
